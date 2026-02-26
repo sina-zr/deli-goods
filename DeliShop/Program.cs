@@ -103,4 +103,6 @@ app.MapDelete("/api/products/{id}", async (ApplicationDbContext context, long id
 .WithName("DeleteProduct")
 .WithOpenApi();
 
+app.MapGet("/api/checkConnection", () => Task.FromResult(Results.Ok())).WithName("CheckConnection").WithOpenApi();
+
 app.Run();
